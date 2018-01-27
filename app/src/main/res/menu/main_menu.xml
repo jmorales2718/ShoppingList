@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/seeEstimatedCost"
+        android:title="@string/estCost"
+        android:icon="@drawable/cost_icon"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/addItem"
+        android:title="@string/addNewItem"
+        android:icon="@android:drawable/ic_menu_add"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/deleteAll"
+        android:title="@string/DelAll"
+        android:icon="@android:drawable/ic_menu_delete"
+        app:showAsAction="ifRoom"
+        />
+</menu>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#7884cc</color>
+    <color name="colorPrimaryDark">#606794</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary1">#3F51B5</color>
+    <color name="colorPrimaryDark1">#303F9F</color>
+    <color name="colorAccent1">#FF4081</color>
+
+    <color name="lightestPurple">#cdd2ec</color>
+    <color name="lila">#7884cc</color>
+    <color name="chillPurple">#c5bad9</color>
+
+    <color name="chillBlue">#7ccaf3</color>
+    <color name="lightBlue">#1390d3</color>
+    <color name="darkBlue">#094667</color>
+    <color name="darkerBlue">#04293d</color>
+    <color name="lightestBlue">#e8f6fd</color>
+    <color name="llblue">#b2e0f8</color>
+    <color name="darkChillBlue">#65c1f1</color>
+
+    <color name="chillRed">#f8b2bd</color>
+    <color name="darkChillRed">#f6a0ae</color>
+
+    <color name="green">#8ec127</color>
+    <color name="darkGreen">#7fad23</color>
+
+    <color name="bookBlue">#6a7b77</color>
+    <color name="flannelRed">#902d3a</color>
+    <color name="compBlue">#3f5ec2</color>
+    <color name="groceryCapBlue">#51b1df</color>
+    <color name="groceryBagGreen">#04a35c</color>
+    <color name="planeTailOrange">#f2662e</color>
+    <color name="lightCompBlue">#4388e9</color>
+    <color name="lighterCompBlue">#66a3f5</color>
+</resources>

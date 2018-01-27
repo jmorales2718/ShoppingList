@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="10dp"
+              android:weightSum="4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_weight="3"
+        android:layout_gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/ivItemIcon"
+            android:contentDescription="@string/ivDescription"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="3"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_vertical"
+            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="4"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center"
+            >
+            <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                />
+
+            <TextView
+                android:id="@+id/tvItemPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"/>
+
+            <CheckBox
+                android:id="@+id/cbPurchasedState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boughtState"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_gravity="center"
+            >
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:background="@color/lighterCompBlue"
+                android:layout_margin="5dp"
+                />
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/delete"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:background="@color/lighterCompBlue"
+                android:layout_margin="5dp"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnShowItemDets"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/itemDets"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:background="@color/lighterCompBlue"
+        android:layout_margin="5dp"
+        />
+
+    <View
+    android:layout_width="match_parent"
+    android:layout_height="4dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/line_separator"
+    android:layerType="software"
+    />
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">ShoppingList</string>
+    <string name="DelAll">Delete All</string>
+    <string name="addNewItem">Add New Item</string>
+    <string name="boughtState">Purchased</string>
+    <string name="itemDets">View Item Details</string>
+    <string name="delete">Delete</string>
+    <string name="itemNameHint">Item Name</string>
+    <string name="cbPurchasedText">Purchased</string>
+    <string name="ItemPrice">Item Price</string>
+    <string name="ItemDescription">Item Description</string>
+    <string name="btnTextAddNewItem">Add New Item</string>
+    <string name="areYouSurePrompt">Are you sure you want to remove all items?</string>
+    <string name="cancel">Cancel</string>
+    <string name="deleteALL">Delete All</string>
+    <string name="edit">Edit</string>
+    <string name="ivDescription">Image based on type of item</string>
+    <string name="estCost">Estimated Cost</string>
+    <string name="editItem">Edit Item</string>
+    <string name="ivSCartDesc">Holds animated shopping cart</string>
+
+
+    <string-array name="spinnerCategories">
+        <item>Groceries</item>
+        <item>Books</item>
+        <item>Technology</item>
+        <item>Travel</item>
+        <item>Clothes</item>
+
+    </string-array>
+</resources>
