@@ -146,8 +146,7 @@ public class MainActivity extends AppCompatActivity
                 lastEdited = (Item) data.getSerializableExtra(NewItemActivity.EDIT_ITEM_KEY);
                 Item oldItem = (Item) data.getSerializableExtra(NewItemActivity.OLD_ITEM_KEY);
                 int oldItemPos = sListAdapter.getItemPosition(oldItem);
-                sListAdapter.removeWithoutUndo(oldItemPos);
-                sListAdapter.addItem(lastEdited);
+                sListAdapter.editItem(oldItemPos, lastEdited);
             }
         }
         super.onActivityResult(requestCode, resultCode, data);
@@ -155,7 +154,7 @@ public class MainActivity extends AppCompatActivity
 
     public void undoDelete()
     {
-        Snackbar.make(coordinatorLayout, "Message is Deleted", Snackbar.LENGTH_LONG)
+        Snackbar.make(coordinatorLayout, "List Item Deleted", Snackbar.LENGTH_LONG)
                 .setAction("UNDO", new View.OnClickListener()
                 {
                     @Override

@@ -108,6 +108,10 @@ public class Item
         }
     }
 
+    public void setPicIconFromID(int picIconID){
+        picIcon = picIcon;
+    }
+
     // Converts a given pic icon id into the corresponding selected spinner item
     public int picIconToSpinnerNumber(int resID)
     {

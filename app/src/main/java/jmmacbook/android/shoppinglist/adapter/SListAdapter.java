@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -50,8 +51,8 @@ public class SListAdapter
     {
         holder.tvItemName.setText(items.get(position).getName());
         holder.tvItemPrice.setText(items.get(position).getPrice());
-        holder.cbItemPurchased.setChecked(items.get(position).isPurchased());
 
+        holder.cbItemPurchased.setChecked(items.get(position).isPurchased());
         holder.cbItemPurchased.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -69,6 +70,7 @@ public class SListAdapter
                 }
             }
         });
+
         holder.ivItemIcon.setImageResource(items.get(position).getPicIcon());
 
         holder.btnEdit.setOnClickListener(new View.OnClickListener()
@@ -123,6 +125,10 @@ public class SListAdapter
         return -1;
     }
 
+    public void setPurchased(int position){
+
+    }
+
     @Override
     public int getItemCount()
     {
@@ -151,11 +157,25 @@ public class SListAdapter
 
     }
 
+    // must pass in spinner of newItem
+    public void editItem(int positionToEdit, Item newItem){
+        Item oldItem = items.get(positionToEdit);
+        items.set(positionToEdit, newItem);
+        oldItem.setName(newItem.getName());
+        oldItem.setDescription(newItem.getDescription());
+        oldItem.setPrice(newItem.getPrice());
+        oldItem.setPicIconFromID(newItem.getPicIcon());
+        oldItem.setPurchased(newItem.isPurchased());
+        oldItem.save();
+        notifyItemChanged(positionToEdit);
+    }
+
     public void removeWithoutUndo(int position)
     {
         items.get(position).delete();
         items.remove(position);
         notifyItemRemoved(position);
+        notifyItemRangeChanged(position, getItemCount());
     }
 
     public void removeItem(int position)
@@ -164,6 +184,7 @@ public class SListAdapter
         items.get(position).delete();
         items.remove(position);
         notifyItemRemoved(position);
+        notifyItemRangeChanged(position, getItemCount());
         ((MainActivity) context).undoDelete();
     }
 
